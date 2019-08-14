@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name        BHARATHI Mod: MooMoo.io Hack fast and better. Auto heal, Hat change, etc...
 // @namespace    -
-// @version      1.0
+// @version      1.1
 // @description  MooMoo.io Hack made by BHARATHI Tutorials now works for every MooMoo.io and Hat change fixed.
 // @author       BHARATHI Tutorials
 // @match        *://*.youtube.com/*
-// @match        *://expermental.moomoo.io/*
+// @match        *://diservers.org/*
 // @match        *://moomoo.io/*
+// @match        *://expermental.moomoo.io/*
+// @match        *://krunker.io/*
 // @match        http://dev.moomoo.io/*
 // @match        *sandbox.moomoo.io/*
 // @include      /^(https?:\/\/)?(www\.)?(.+)krunker\.io(|\/|\/\?(server|party)=.+)$/
@@ -24,7 +26,7 @@ var msgpack5 = msgpack;
 if (window.location.href.includes("moomoo")){
     $(document).ready(() => {
 
-//Neat cursor: credit to BHARATHI Tutorials
+//Neat cursor: credit to FlareZ 3301#6016
 $("#gameCanvas").css('cursor', 'url(http://cur.cursors-4u.net/user/use-1/use153.cur), default');
 $("#consentBlock").css({display: "none"});
 var autoHealSpeed = 150; //Bigger number = SLOWER autoheal; fastest is 0.
@@ -1367,7 +1369,7 @@ menuChange.innerHTML = `
 <h3 class="menuPrompt lowpromptdetail">When I press <input value="${String.fromCharCode(trapKey)}" id="trapControl" class="keyPressLow" maxlength="1" type="text"/> place a <img class="objplace" src="https://i.imgur.com/mHWrRQV.png"/></h3>
 <hr id="hrule"/>
 <div id="endwrap">
-<h3 id="createdEnd">Created by BHARATHI Tutorials | <a href="https://www.youtube.com/channel/UCmShLoqUMSUATJZxUI7ULmw?">Subscribe my channel</a></h3>
+<h3 id="createdEnd">Created by BHARATHI Tutorials | <a href="https://www.youtube.com/channel/UCmShLoqUMSUATJZxUI7ULmw?">Subscribe my Channel</a></h3>
 </div>
 `
 //document.querySelector("#menuCardHolder").prepend(menuChange);
@@ -3036,7 +3038,7 @@ document.ps = placeSpike;
   var current10 = 0;
   var pending;
 
-    var START_ATTACK =  msgpack5.encode(["i",[[1142,16,"f",-1,1,0,0,0,0,0,16,"f",-1,"f"]]]);
+    var START_ATTACK =  msgpack5.encode(["i",[[1142,16,"f",-1,1,0,0,0,0,0,16,"f",-1,"f"]]]);
     var END_ATTACK = [146, 161, 105, 145, 158, 205, 5, 53, 18, 161, 102, 255, 161, 102, 15, 161, 102, 255, 0, 0, 0, 0, 0, 0];
 
   window.WebSocket.prototype.oldSend = WebSocket.prototype.send;
@@ -3095,7 +3097,7 @@ document.innerHTML = ``;
 
 GM_xmlhttpRequest({
     method: "GET",
-    url: `https://cdn.jsdelivr.net/gh/Sam-DevZ/io-track2/io-track2/gamejsv102.js`,
+    url: `https://cdn.jsdelivr.net/gh/Sam-DevZ/io-track2/io-track2/gamejsv103.js`,
     onload: jsresp => {
         let code = jsresp.responseText
 
@@ -3242,7 +3244,7 @@ unsafeWindow.mdlsettings = {screenaim: false};
          //console.log('closest');
         //if (unsafeWindow.control.mouseDownL = 1) unsafeWindow.control.mouseDownL = 0;
         if (!unsafeWindow.mdlsettingsmain.autoaim%3) return;
-
+         
          //console.error("ZOOMING IN ON TARGET");
           // console.log('aimval' + me.aimVal);
 
